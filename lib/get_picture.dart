@@ -21,6 +21,7 @@ class GetPictureScreenState extends State<GetPictureScreen> {
   
   List<File> imgs;
   int count;
+  bool load;
   final List<String> tips=['pick front','pick top','pick bottom','pick left','pick right'];
   String tip;
   //var _faces;
@@ -28,7 +29,7 @@ class GetPictureScreenState extends State<GetPictureScreen> {
   Image _uiimg;
   @override
   void initState() {
-   
+    load = false;
     super.initState();
     imgs=List<File>();
     count = 0;
@@ -42,6 +43,7 @@ class GetPictureScreenState extends State<GetPictureScreen> {
  
 
   Future getImage() async {
+    load = true;
     if(count<5)
     {
       var image = await ImagePicker.pickImage(source: ImageSource.camera, maxHeight: 750); //imageQuality: 50
@@ -51,7 +53,7 @@ class GetPictureScreenState extends State<GetPictureScreen> {
     final faceDetector = FirebaseVision.instance.faceDetector();
     List<Face> faces = await faceDetector.processImage(image1);
     for (var i = 0; i < faces.length; i++) {
-    allbounds.add([faces[i].boundingBox.top,faces[i].boundingBox.top,faces[i].boundingBox.bottom,faces[i].boundingBox.left,faces[i].boundingBox.right]);
+    allbounds.add([faces[i].boundingBox.left,faces[i].boundingBox.top,faces[i].boundingBox.right,faces[i].boundingBox.bottom]);
     }
     if(faces.length == null)
     facebnd.add(0);
@@ -94,8 +96,12 @@ class GetPictureScreenState extends State<GetPictureScreen> {
       body: 
       Center(
       child:
-        _uiimg == null
-            ? Text('No image selected.')
+        (_uiimg == null && load ==true)
+            ? 
+            new CircularProgressIndicator()
+            :
+            (_uiimg == null && load==false)?
+            Text('No image selected.')
             : //Container( child: Image.file(_image))
             Center(
                   child: FittedBox(

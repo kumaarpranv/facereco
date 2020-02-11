@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:facereco/get_picture.dart';
 import 'package:flutter/material.dart';
-//import 'start_vid.dart';
+import 'start_vid.dart';
 //import 'temp_stateful.dart';
 
 Future<void> main() async {
@@ -13,7 +13,7 @@ Future<void> main() async {
   routes: {
   
     '/': (context) => MyApp(),
-    '/start':(context) => GetPictureScreen(),//TakeVid(),
+    '/start':(context) => TakeVid(),//TakeVid(),
     '/add': (context) => GetPictureScreen()//TakePictureScreen(),
     //'/display':(context) => DisplayPictureScreen()
   },
