@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "930833689142",
+    "firebase_url": "https://facerec-8fd71.firebaseio.com",
+    "project_id": "facerec-8fd71",
+    "storage_bucket": "facerec-8fd71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:930833689142:android:85c7d9c675d1ed93234697",
+        "android_client_info": {
+          "package_name": "com.tcs.facerec"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "930833689142-ars3dljco8pe4gc3echi1ma9vubsq3oa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDccqH2QAQ2MkGiboKwJxdu1Y97nhagQWk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "930833689142-ars3dljco8pe4gc3echi1ma9vubsq3oa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:930833689142:android:eca6ab9e3a010688234697",
+        "android_client_info": {
+          "package_name": "com.tcs.facereco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "930833689142-ars3dljco8pe4gc3echi1ma9vubsq3oa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDccqH2QAQ2MkGiboKwJxdu1Y97nhagQWk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "930833689142-ars3dljco8pe4gc3echi1ma9vubsq3oa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
